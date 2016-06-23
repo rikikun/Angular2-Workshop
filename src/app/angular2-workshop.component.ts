@@ -11,4 +11,11 @@ export class Angular2WorkshopAppComponent {
 	title = 'Tour of Heroes';
 	heroes = HEROES;
 
+	selectedHero:Hero;
+
+	selectHero(hero:Hero) {
+		console.log(hero);
+		this.selectedHero=hero;
+	}
+
 }
