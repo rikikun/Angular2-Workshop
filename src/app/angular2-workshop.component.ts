@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Hero} from './entity/hero.entity';
+import {Hero,HEROES} from './entity/hero.entity';
 
 @Component({
 	moduleId: module.id,
@@ -9,8 +9,6 @@ import {Hero} from './entity/hero.entity';
 })
 export class Angular2WorkshopAppComponent {
 	title = 'Tour of Heroes';
-	hero : Hero = {
-		id: 1,
-		name: 'Windstorm'
-	};
+	heroes = HEROES;
+
 }
