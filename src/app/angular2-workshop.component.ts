@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['angular2-workshop.component.css']
 })
 export class Angular2WorkshopAppComponent {
-  title = 'angular2-workshop works!';
+  title = 'Tour of Heroes';
+  hero = 'Windstorm';
 }
