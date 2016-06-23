@@ -15,8 +15,11 @@ import {HeroesComponent} from './components/heroes';
 	providers:[HeroService,ROUTER_PROVIDERS]
 })
 @RouteConfig([
-  {path:'/heroes', component: HeroesComponent, name: 'Heroes'},
-])
+	{path:'/heroes', component: HeroesComponent, name: 'Heroes'},
+	{path: '/detail/:id',name: 'HeroDetail',component: HeroDetailComponent}
+	])
+
+
 export class Angular2WorkshopAppComponent implements OnInit {
 	title = 'Tour of Heroes';
 	heroes:Hero[];
