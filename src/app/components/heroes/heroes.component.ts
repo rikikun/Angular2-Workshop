@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HeroService} from '../../service/hero.service';
 import {Hero} from '../../entity/hero.entity';
+import {Router} from '@angular/router-deprecated';
 
 @Component({
   moduleId: module.id,
@@ -12,17 +13,14 @@ export class HeroesComponent implements OnInit {
 
 	heroes:Hero[];
 
-  	constructor(private heroService:HeroService) {}
+  	constructor(private heroService:HeroService,private router:Router) {}
 
 	ngOnInit() {
 		this.heroes=this.heroService.getHeroes();
 	}
 
-	selectedHero:Hero;
-
 	selectHero(hero:Hero) {
-		console.log(hero);
-		this.selectedHero=hero;
+		this.router.navigate(['HeroDetail',{id:hero.id}]);
 	}
 
 }
