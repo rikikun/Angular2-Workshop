@@ -1,14 +1,5 @@
-<router-outlet></router-outlet>
-
-
 <h1>{{title}}</h1>
+<a [routerLink]="['Heroes']">Heroes</a>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
-
-<h2>My Heroes</h2>
-<ul class="heroes">
-	<li *ngFor="let hero of heroes" (click)="selectHero(hero)">
-		<span class="badge">{{hero.id}}</span> {{hero.name}}
-	</li>
-</ul>
+<router-outlet></router-outlet>
 
